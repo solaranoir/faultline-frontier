@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-frontier-bg: #101820;
+  --color-frontier-panel: #1c2933;
+  --color-frontier-amber: #e8a94d;
+  --color-frontier-teal: #57c6bc;
+  --color-frontier-text: #edf2f4;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-frontier-bg);
+  color: var(--color-frontier-text);
+  font-family: system-ui, sans-serif;
+}
