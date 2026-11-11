@@ -1,0 +1,36 @@
+
+import type { Lesson } from "../../schemas/lesson";
+import { LessonHeader } from "./LessonHeader";
+import { LessonContent } from "./LessonContent";
+import { LessonActivities } from "./LessonActivities";
+
+export type LessonViewerProps = {
+  lesson: Lesson;
+};
+
+export function LessonViewer({
+  lesson,
+}: LessonViewerProps) {
+  return (
+    <main className="min-h-screen bg-frontier-bg px-4 py-10 text-frontier-text sm:px-8">
+      <article className="mx-auto max-w-3xl space-y-10">
+        <nav aria-label="Breadcrumb">
+          <span className="text-sm font-semibold tracking-widest text-frontier-teal">
+            FAULTLINE FRONTIER / LESSONS
+          </span>
+        </nav>
+
+        <LessonHeader lesson={lesson} />
+
+        <div className="border-t border-white/10 pt-8">
+          <LessonContent blocks={lesson.content} />
+        </div>
+
+        <div className="border-t border-white/10 pt-8">
+          <LessonActivities lesson={lesson} />
+        </div>
+      </article>
+    </main>
+  );
+}
+
