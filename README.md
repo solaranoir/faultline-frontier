@@ -1,75 +1,114 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ⚡ Faultline Frontier
 
-Currently, two official plugins are available:
+**Learn the systems. Break the systems. Build them better.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Faultline Frontier is an interactive learning platform for Python backend engineering, distributed systems, concurrency, and reliability testing.
 
-## React Compiler
+Developed under **Noir Forge**, the project combines short lessons, failure simulations, knowledge checks, and hands-on Python challenges.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Phase 1: Learning Foundation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Reusable lesson content schemas
+- Interactive simulation definitions
+- Quiz and assessment schemas
+- Python coding challenge definitions
+- Runtime content validation with Zod
+- React + TypeScript frontend
+- Automated testing with Vitest
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Planned Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **The Failure Range:** Interactive distributed failure simulations
+- **The Proving Grounds:** Python coding challenges evaluated with pytest
+- **Bounty Board:** Daily engineering challenges
+- **Marshal's Log:** Learning progress and completion history
+- **Frontier Expeditions:** Multi-stage backend engineering projects
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Technology Stack
 
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- Vitest + React Testing Library
+- Zod
+- ESLint
+- Node.js managed with mise
+
+Planned backend: FastAPI, PostgreSQL, and isolated Python execution environments.
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- mise (recommended)
+- Node.js and npm
+
+### Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/faultline-frontier.git
+cd faultline-frontier
+
+mise install
+npm ci
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Start Development Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
 ```
+
+### Run Tests
+
+```bash
+npm run test:run
+```
+
+### Lint and Build
+
+```bash
+npm run lint
+npm run build
+```
+
+## Project Structure
+
+```text
+src/
+├── components/    # Reusable UI components
+├── content/       # Lessons and learning materials
+├── schemas/       # Zod validation and TypeScript types
+├── test/          # Test configuration
+└── App.tsx
+```
+
+## Development Workflow
+
+- `main`: Stable integration branch
+- `phase_1/1.0`: Initial foundation
+- `phase_1/1.1-lesson-viewer`: Reusable lesson viewer
+- Subsequent branches: Focused features and improvements
+
+All feature branches should be reviewed through pull requests before merging into `main`.
+
+## Roadmap
+
+See `docs/Faultline_Frontier_Feature_Roadmap.pdf` for the development roadmap.
+
+## Security
+
+Future Python coding challenges will execute in isolated environments with resource limits and restricted access.
+
+Submitted code must never execute directly within the application server.
+
+## Project Status
+
+**Phase 1: In development**
+
+Part of the Noir Forge project ecosystem.
+
