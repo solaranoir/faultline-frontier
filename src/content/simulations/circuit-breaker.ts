@@ -2,7 +2,7 @@
 import { SimulationSchema } from "../../schemas/simulation";
 
 export const circuitBreakerSimulation = SimulationSchema.parse({
-  id: "circuit-breaker-recovery",
+  id: "sim-circuit-breaker",
   title: "Circuit Breaker Recovery",
   description:
     "Observe how a circuit breaker protects a service during dependency failures.",

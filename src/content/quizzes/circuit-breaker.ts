@@ -2,7 +2,7 @@
 import { QuizSchema } from "../../schemas/quiz";
 
 export const circuitBreakerQuiz = QuizSchema.parse({
-  id: "circuit-breaker-quiz",
+  id: "quiz-circuit-breaker",
   title: "Circuit Breaker Knowledge Check",
   description:
     "Test your understanding of failure detection and recovery.",
